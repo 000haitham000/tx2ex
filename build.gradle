@@ -1,9 +1,21 @@
-plugins {
-    id 'java'
-}
+apply plugin: 'java-library'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
 
 group 'com.coin-laboratory'
 version '2.0.1'
+
+//publishing {
+//    publications {
+//        myLibrary(MavenPublication) {
+//            from components.java
+//        }
+//    }
+//
+//    repositories {
+//        mavenLocal()
+//    }
+//}
 
 sourceCompatibility = 1.8
 
