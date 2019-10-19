@@ -1,21 +1,74 @@
 apply plugin: 'java-library'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
+apply plugin: 'signing'
 
-group 'com.coin-laboratory'
+group 'com.github.000haitham000'
+archivesBaseName = "tx2ex"
 version '2.0.1'
 
-//publishing {
-//    publications {
-//        myLibrary(MavenPublication) {
-//            from components.java
-//        }
-//    }
-//
-//    repositories {
-//        mavenLocal()
-//    }
-//}
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+signing {
+    sign configurations.archives
+}
+
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+            pom.project {
+                name 'tx2ex'
+                packaging 'jar'
+                // optionally artifactId can be defined here
+                description 'A library that parses and evaluates mathematical formulas in textual format.'
+                url 'https://github.com/000haitham000/tx2ex'
+
+                scm {
+                    connection 'scm:git:git://github.com/000haitham000/tx2ex.git'
+                    developerConnection 'scm:git:ssh://github.com/000haitham000/tx2ex.git'
+                    url 'https://github.com/000haitham000/tx2ex'
+                }
+
+                licenses {
+                    license {
+                        name 'The Apache License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'hseada'
+                        name 'Haitham Seada'
+                        email '000haitham000@gmail.com'
+                    }
+                }
+            }
+        }
+    }
+}
 
 sourceCompatibility = 1.8
 
