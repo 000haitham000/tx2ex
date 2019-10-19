@@ -9,36 +9,36 @@ operators and encourages further extensions.
 FEATURES
 --------
 The library supports the following features:
-(1) Floating-point numbers/calculations
-(2) Addition and subtraction operators
-(3) Multiplication and division operators
-(4) Modulo operator (division remainder)
-(5) Negation
-(6) Redundant positive signs
-(7) Summation operator (Σ) 
-(8) Product operator (Π) 
-(9) Constants
-(10) Trigonometric functions 
-(11) Min and max operators
-(12) Floor and ceiling operators 
-(13) C-type identifiers (for variable names) 
-(14) Simple variables (name-value pairs) 
-(15) Array variables (a value for each index) 
-(16) Indexing offset of One (instead of Zero) 
-(17) Using mathematical expressions as array indices 
-(18) Handling arbitrary spacing 
-(19) Nested parentheses 
-(20) Ensuring parentheses, brackets and braces balancing 
-(21) C-like operator precedence 
-(22) Meaningful and informative error messages 
-(23) Extensibility
+1. Floating-point numbers/calculations
+2. Addition and subtraction operators
+3. Multiplication and division operators
+4. Modulo operator (division remainder)
+5. Negation
+6. Redundant positive signs
+7. Summation operator (Σ) 
+8. Product operator (Π) 
+9. Constants
+10. Trigonometric functions 
+11. Min and max operators
+12. Floor and ceiling operators 
+13. C-type identifiers (for variable names) 
+14. Simple variables (name-value pairs) 
+15. Array variables (a value for each index) 
+16. Indexing offset of One (instead of Zero) 
+17. Using mathematical expressions as array indices 
+18. Handling arbitrary spacing 
+19. Nested parentheses 
+20. Ensuring parentheses, brackets and braces balancing 
+21. C-like operator precedence 
+22. Meaningful and informative error messages 
+23. Extensibility
 
 GETTING STARTED
 ---------------
 In order to use TX2EX in your Java project, use either of the following options:
-1 - Clone the repository found at LINK to you local git repository. Most IDEs
+1. Clone the repository found at LINK to you local git repository. Most IDEs
     have this functionality.
-2 - Modify/Use the cloned source files as needed
+2. Modify/Use the cloned source files as needed
 
 
 BUILT USING
