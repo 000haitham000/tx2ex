@@ -1,8 +1,10 @@
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.000haitham000/tx2ex.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.000haitham000%22%20AND%20a:%22tx2ex%22)
+
 TX2EX Version 2.0.1 - 8/12/2018
 ------------------------------
 TX2EX is an open source library intended to help programmers parse and evaluate
 their textual mathematical expressions. The library supports a wide-range of
-operators out of the package and the encourages further extensions.
+operators and encourages further extensions.
 
 FEATURES
 --------
